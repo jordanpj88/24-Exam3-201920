@@ -3,9 +3,9 @@ Exam 3, problem 5.
 
 Authors: Vibha Alangar, Aaron Wilkin, David Mutchler, Dave Fisher, 
          Matt Boutell, Amanda Stouder, their colleagues and 
-         PUT_YOUR_NAME_HERE.  January 2019.
+         Parker Jordan.  January 2019.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the   is_prime   function defined below.
+# Done: 2.  READ the doc-string for the   is_prime   function defined below.
 # It is the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -145,11 +145,19 @@ def problem5(seq_of_seq):
       :rtype: (list of int) | int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    a = []
+    for k in range(len(seq_of_seq)):
+        sub_seq = seq_of_seq[k]
+        for j in range(len(sub_seq)):
+            if sub_seq[j] > sub_seq[j - 1]:
+                biggest = sub_seq[j]
+                a = a + [biggest]
 
+    return a
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
